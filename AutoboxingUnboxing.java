@@ -11,13 +11,13 @@ public class SumWithAutoboxing {
         String[] tokens = input.split(" ");
 
         for (String token : tokens) {
-            // parse string to int, autobox to Integer while adding to ArrayList
+          
             numbers.add(Integer.parseInt(token));
         }
 
         int sum = 0;
         for (Integer num : numbers) {
-            // unboxing Integer to int
+       
             sum += num;
         }
 
