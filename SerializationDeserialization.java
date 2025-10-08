@@ -13,11 +13,11 @@ class Student implements Serializable {
     }
 }
 
-public class StudentSerializationDemo {
+public class SerializationDeserialization {
     public static void main(String[] args) {
         Student student = new Student(101, "Alice", 9.2);
 
-        // Serialize to file
+  
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("student.ser"))) {
             oos.writeObject(student);
             System.out.println("Student object serialized successfully.");
@@ -25,7 +25,7 @@ public class StudentSerializationDemo {
             e.printStackTrace();
         }
 
-        // Deserialize from file
+        
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("student.ser"))) {
             Student deserializedStudent = (Student) ois.readObject();
             System.out.println("Deserialized Student:");
